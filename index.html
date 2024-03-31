@@ -1,4 +1,1972 @@
-<html>
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    .backP{
+    width: 99.9%;
+    border: 10px solid lightgray;
+    background-color: lightgray;
+  	height: 100.1%;
+    margin-left: -10px;
+    margin-top: -10px;
+    }
+
+    .blocks {
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    width: 80%;
+    height: 50%;
+    border: 1px solid black;
+    }
+
+    .bloksG{
+    display: flex;
+    justify-content: center;
+    }
+
+    .btn {
+    border: 1px solid black;
+    background-color: inherit;
+    padding: 15px 30px;
+    font-size: 25px;
+    cursor: pointer;
+    display: inline-block;
+    }
+
+    .btn:hover {background: #eee;}
+
+    .btnD {
+    border: 1px solid black;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    }
+    .btnD:hover {border: 5px solid goldenrod;}
+
+    .btnDT {
+    border: 1px solid black;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    color: goldenrod;
+    }
+
+    .batonMar{
+    width: 1px;
+    height: 1px;
+    padding: px;
+    border: 1px solid goldenrod;
+  	height: px;
+    padding-right: px;
+    padding-left: px;
+    margin-left: 400px;
+    margin-top: -50px;
+    }
+
+    .headtopH{
+    width: 50%;
+    padding: px;
+    border: 0px solid  gold;
+    background-color: brown;
+  	height: 90px;
+    padding-right: px;
+    padding-left: px;
+    margin-left: ;
+    margin-top: 15px;
+    font-size: 50px;
+    margin-left: 15%;
+    overflow: hidden;
+    }
+
+    .headtoptopH{
+    width: 11%;
+    padding: px;
+    border: 5px solid brown;
+    background-color: burlywood;
+  	height: 50px;
+    padding-right: ;
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-left: 5%;
+    text-decoration-line: none;
+    color: black;
+    font-size: 35px;
+    overflow: hidden;
+    }
+
+    .headtoptopHT{
+    width: 40%;
+    padding: 0px;
+    border: 1px solid brown;
+    background-color: brown;
+  	height: 50px;
+    padding-right: px;
+    padding-left: -10px;
+    margin-top: 25px;
+    margin-left: 20px;
+    text-decoration-line: none;
+    overflow: hidden;
+    }
+
+    .headtop{
+    width: 100%;
+    padding: 10px;
+    border: 3px solid goldenrod;
+    background-color: brown;
+  	height: 100px;
+    padding-left: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    padding-right: 1px;
+    }
+
+    .map{
+    width: 100%;
+    padding: 0px;
+    border: 0px solid black;
+    background-color: #ffffff;
+    height: 600px;
+    padding-left: 0px;
+    margin-top: 50px;
+    padding-right: 0px;
+    }
+
+    .headtopOb{
+    width: 100%;
+    padding: 10px;
+    border: 3px solid goldenrod;
+    background-color: brown;
+  	height: 100px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-top: 50px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-left: -1px;
+    margin-right: ;
+    color: goldenrod;
+    display: flex;
+    justify-content: center;
+    }
+
+    .block1{
+    width: 27%;
+    padding: 0px;
+    border: 5px solid lightgrey;
+    background-color: brown;
+    height: 30%;
+    padding-left: px;
+    margin-top: 60px;
+    margin-left: 40px;
+    text-decoration-line: none;
+    color: black;
+    justify-content: center;
+    }
+    
+    .block2{
+    width: 100%;
+    padding: px;
+    border: 3px solid goldenrod;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: goldenrod;
+    height: 45px;
+    margin-top: -5px;
+    overflow-y: hidden;
+    }
+
+    .block3{
+    width: 100%;
+    height: px;
+    padding: px;
+    border: 3px solid goldenrod;
+    background-color: burlywood;
+    border-left: 0px;
+    border-right: 0px;
+    height: 23%;
+    border-top: 0px;
+    font-size: 15px ;
+    overflow-y: hidden;
+    }
+
+    .headtopDown{
+    width: 100%;
+    height: 100px;
+    padding: 14px;
+    border: 1px solid goldenrod;
+    background-color: brown;
+  	height: 55px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-top: 50px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    }
+
+    .headtopDownH{
+    width: 1700px;
+    height: 40px;
+    padding: px;
+    border: 1px solid brown;
+    background-color: brown;
+    padding-right: px;
+    padding-left: px;
+    margin-left: 95px;
+    margin-top: -5px;
+    }
 
   
+    #zatemnenie1 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie2 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie3 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie4 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie5 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie6 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie7 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie8 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie9 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie10 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie11 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie12 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie13 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie14 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie15 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie16 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie17 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie18 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie19 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie20 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie21 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie22 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie23 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie24 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie25 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie26 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+    #zatemnenie27 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    }
+
+
+    #zatemnenie1:target {display: block;}
+    #zatemnenie2:target {display: block;}
+    #zatemnenie3:target {display: block;}
+    #zatemnenie4:target {display: block;}
+    #zatemnenie5:target {display: block;}
+    #zatemnenie6:target {display: block;}
+    #zatemnenie7:target {display: block;}
+    #zatemnenie8:target {display: block;}
+    #zatemnenie9:target {display: block;}
+    #zatemnenie10:target {display: block;}
+    #zatemnenie11:target {display: block;}
+    #zatemnenie12:target {display: block;}
+    #zatemnenie13:target {display: block;}
+    #zatemnenie14:target {display: block;}
+    #zatemnenie15:target {display: block;}
+    #zatemnenie16:target {display: block;}
+    #zatemnenie17:target {display: block;}
+    #zatemnenie18:target {display: block;}
+    #zatemnenie19:target {display: block;}
+    #zatemnenie20:target {display: block;}
+    #zatemnenie21:target {display: block;}
+    #zatemnenie22:target {display: block;}
+    #zatemnenie23:target {display: block;}
+    #zatemnenie24:target {display: block;}
+    #zatemnenie25:target {display: block;}
+    #zatemnenie26:target {display: block;}
+    #zatemnenie27:target {display: block;}
+
+    #okno{
+    width: 50%;
+    height: 95%;
+    text-align: start;
+    padding: px;
+    border: 3px solid #0000cc;
+    border-radius: 10px;
+    color: #0000cc;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #fff;
+    }
+    .close {
+    display: inline-block;
+    width: 2%;
+    height: 4%;
+    margin: px;
+    text-decoration: none;
+    font-size: 14pt;
+    cursor:pointer;
+    margin-left: 5%;
+    margin-top: -0.5%;
+    position: fixed;
+    }
+
+    .photo{
+    width: 100%;
+    padding: 0px;
+    border: 0px solid black;
+    background-color: burlywood;
+    height: 40.5%;
+    padding-left: px;
+    margin-top: %;
+    padding-right: px;
+    padding-top: px;
+    display: flex;
+    text-align: center;
+    border-radius: 7px;
+    border-bottom-left-radius: 0px;
+    border bottom-right-radius: 0px;
+    }
+    .miniMap{
+    width: 50%;
+    padding: 0px;
+    border: 1px solid black;
+    background-color: #ffffff;
+    height: 100%;
+    margin-top: -1%;
+    margin-left: 3%;
+    }
+    .underMAP{
+    width: 100%;
+    padding: 0px;
+    border: 0px solid black;
+    background-color: brown;
+    height: 30%;
+    padding-left: px;
+    margin-top: %;
+    padding-top: 1%;
+    color: goldenrod;
+    display: flex;
+    justify-content: start;
+    }
+    .inf_ob_pam{
+    width: 100%;
+    height: 28.3%;
+    padding: px;
+    border: 1px solid black;
+    background-color: #ffffff;
+    padding-right: px;
+    padding-left: px;
+    margin-left: -0.5px;
+    margin-top: px;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 11px;
+    }
+    .inf_ob_pam_opis{
+    width: 100%;
+    height: 100%;
+    padding: px;
+    border: 1px solid black;
+    background-color: burlywood;
+    padding-right: px;
+    padding-left: px;
+    margin-left: -0.5px;
+    margin-top: px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 11px;
+    color: black;
+    overflow-y: scroll;
+    font-size: 24px;
+    }
+    .inf_ob_pam_photo{
+    width: 100%;
+    height: 96%;
+    padding: px;
+    border: none;
+    background-color: burlywood;
+    padding-right: px;
+    padding-left: px;
+    margin-left: px;
+    margin-top: 1%;
+    }
+    .inf_ob_pam_1{
+    width: 100%;
+    height: 100%;
+    padding: px;
+    border: none;
+    background-color: burlywood;
+    padding-right: px;
+    padding-left: px;
+    margin-left: px;
+    margin-top: ;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    }
+    .blockN{
+    width: 40%;
+    padding: 0px;
+    background-color: brown;
+    height: 98%;
+    padding-left: px;
+    margin-top: px;
+    margin-left: 5%;
+    border: none;
+    font-size: 150%;
+    overflow-y: scroll;
+    }
+    .blockM{
+    width: 100%;
+    padding: px;
+    border: 2px solid goldenrod;
+    background-color: brown;
+    height: 30%;
+    margin-top: 5%;
+    margin-left: ;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    }
+
+ .photomon{
+    text-align: center;
+    overflow: hidden;
+ }   
+
+    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>ГЛАВНАЯ</title>
+</head>
+
+<body>
+<div class="backP">
+
+
+  <div class="headtop">
+    <div class="blocks">
+      <a class="btnDT headtoptopHT" href="file:///C:/OSPanel/domains/localhost/backup/2024-03-25/indexA.html"> Проект "Музей под открытым небом: скульптуры и памятники Выборгского района СПБ" </a>
+      <a class="btn headtoptopH" href="file:///C:/OSPanel/domains/localhost/backup/2024-03-25/indexM.html"> Маршруты </a>
+    </div>
+  </div>
+
+
+  <div class="map"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1h9dllPvWFaNpQeRNb-Ea6AjLOKUMQIs&ehbc=2E312F&noprof=1" width="100%" height="600"></iframe> </div>
+  
+
+  <div class="headtopOb"> 
+    <div class="headtopH"> ДОСОВЕТСКИЙ ПЕРИОД</div>
+  </div>
+
+  <div class="bloksG">
+  <div class="blocks">
+      <a class="btnD block1" href="#zatemnenie1"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Виллие Я. В. </div>
+      <div class="block3"> Адрес: Боткинская ул., 20, сад Военно-медицинской академии <br>
+        Дата открытия: 9 декабря 1859 г<br>
+        Скульптор: Иенсен Давид Иванович<br>
+        Состояние: существует<br>
+        Материалы: бронза, золото, серый гранит, красный гранит<br>
+      </div>    
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie2"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Боткину С.П.</div>
+      <div class="block3"> Адрес: Боткинская ул., 20 <br>
+        Дата открытия: 25 мая 1908 г<br>
+        Скульптор: Беклемишев Владимир Александрович<br>
+        Состояние: существует<br>
+        Материалы: бронза, золото, красный гранит<br> </div>
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie3"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Скамья Блока(Пушкина)</div>
+      <div class="block3"> Адрес: ул. Вологдина, Санкт-Петербург, Шуваловский парк <br>
+        Дата открытия: -<br>
+        Скульптор: -<br>
+        Состояние: разрушается<br>
+        Материалы: известняк, кирпич<br> </div>
+    </a>  
+  </div>
+  </div>
+
+  <div class="bloksG">
+  <div class="blocks">
+    <a class="btnD block1" href="#zatemnenie4">
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Волынскому А. П., Хрущеву А. Ф., Еропкину П. М. </div>
+      <div class="block3"> Адрес: Большой Сампсониевский пр., 41, в ограде Сампсониевского собора <br>
+        Дата открытия: 15 марта 1886 г<br>
+        Скульптор: Опекушин Александр Михайлович <br>
+        Состояние: Существует<br>
+        Материалы: бронза, чугун, золото, красный гранит<br> </div>
+    </a>  
+  </div> 
+  </div>
+
+  <div class="headtopOb">  
+    <div class="headtopH">СОВЕТСКИЙ ПЕРИОД</div>
+  </div>
+
+  <div class="bloksG">
+  <div class="blocks">
+    <a class="btnD block1" href="#zatemnenie5"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Александру Матросову </div>
+      <div class="block3"> Адрес: Санкт-Петербург, пр. Большой Сампсониевский, д. 68 <br>
+        Дата открытия: 1968 г<br>
+        Скульптор: Л.М. Торич<br>
+        Состояние: Существует<br>
+        Материалы: серый гранит<br> </div>  
+    </a>
+  
+    <a class="btnD block1" href="#zatemnenie6">
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник военным медикам </div>
+      <div class="block3"> Адрес: Санкт-Петербург, пл. Военных медиков <br>
+        Дата открытия: 8 мая 1996 г<br>
+        Скульптор: : Б.А. Петров<br>
+        Состояние: Существует<br>
+        Материалы: серый гранит, бронза<br> </div>     
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie7"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Л. А. Орбели </div>
+      <div class="block3"> Адрес: Тореза пр., 44, НИИ эволюционной физиологии и биохимии им. И.М. Сеченова <br>
+        Дата открытия: 6 ноября в 1969 г<br>
+        Скульптор: Епифанов Дмитрий Михайлович<br>
+        Состояние: Существует<br>
+        Материалы: бронза, серый гранит<br> </div>
+    </a>
+  </div>
+  </div>
+
+  <div class="bloksG">
+  <div class="blocks">
+    <a class="btnD block1" href="#zatemnenie8"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятный знак на месте дуэли К. П. Чернова и В. Д. Новосильцева </div>
+      <div class="block3"> Адрес: Санкт-Петербург, парк Лесотехнической академии <br>
+        Дата открытия: 10 сентября 1988 г<br>
+        Скульптор: Васильковский Владимир Сергеевич<br>
+        Состояние: существует<br>
+        Материалы: серый гранит<br> </div>   
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie9" > 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Маринеско А. И. </div>
+      <div class="block3"> Адрес: Санкт-Петербург, пр. Большой Сампсониевский, д. 28 <br>
+        Дата открытия: 7 мая 1990 г<br>
+        Скульптор: М. Анануров<br>
+        Состояние: Существует<br>
+        Материалы: бронза, красный гранит<br> </div>  
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie10">
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Бюст героя Советского Союза Ф. А. Смолячкова </div>
+      <div class="block3"> Адрес: Санкт-Петербург, ул. Смолячкова, д. 11 <br>
+        Дата открытия: 9 декабря 1859 г<br>
+        Скульптор: А. А. Киселев<br>
+        Состояние: Существует<br>
+        Материалы: бронза, серый гранит<br> </div>  
+    </a>
+  </div>
+  </div>
+
+  <div class="bloksG">
+  <div class="blocks">
+    <a class="btnD block1" href="#zatemnenie11"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Иоффе А. Ф. </div>
+      <div class="block3"> Адрес: Политехническая ул., 26, перед зданием ФТИ им. А.Ф. Иоффе <br>
+        Дата открытия: 21 июля 1964 г<br>
+        Скульптор: Гликман Гавриил Давидович<br>
+        Состояние: Существует<br>
+        Материалы: мрамор, красноый гранит, золото<br> </div>     
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie12">
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Константинову Б. П. </div>
+      <div class="block3"> Адрес: Политехническая ул., 26, перед зданием ФТИ им. А.Ф. Иоффе <br>
+        Дата открытия: 10 ноября 1975 г<br>
+        Скульптор: Аникушин Михаил Константинович<br>
+        Состояние: Существует<br>
+        Материалы: бронза, золото, красног гранит<br> </div>
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie13"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Лётчикам </div>
+      <div class="block3"> Адрес: Санкт-Петербург, улица Жака Дюкло, дом 22, лесопарк Сосновка <br>
+        Дата открытия: 23 февраля в 1978 г<br>
+        Скульптор: Н. А. Карпова<br>
+        Состояние: Существует<br>
+        Материалы: бронза, бетон<br> </div>
+    </a>
+  </div>
+  </div>
+
+  <div class="bloksG">
+  <div class="blocks">
+    <a class="btnD block1" href="#zatemnenie14" > 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Кладбище «Дом лесника» </div>
+      <div class="block3"> Адрес: Санкт-Петербург, дорога в Каменку, д. 37. <br>
+        Дата открытия: -<br>
+        Скульптор: -<br>
+        Состояние: Существует<br>
+        Материалы: бронза, золото, серый гранит, чугун<br> </div> 
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie15" > 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Героям Октябрьской революции </div>
+      <div class="block3"> Адрес: Новороссийская ул., 1, парк Лесотехнической академии <br>
+        Дата открытия: 1953 г, 1967 г <br>
+        Скульптор: -<br>
+        Состояние: Существует<br>
+        Материалы: бронза, золото, серый гранит, красный гранит<br> </div>
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie16"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Первостроителям Санкт-Петербурга </div>
+      <div class="block3"> Адрес: Санкт-Петербург, Сампсониевский сад Сампсониевского собора <br>
+        Дата открытия: 17 октября 1995 г<br>
+        Скульптор: В. Б. Бухаев<br>
+        Состояние: Существует<br>
+        Материалы: бронза, красный гранит<br> </div>
+    </a>
+  </div>
+  </div>
+
+  <div class="bloksG">
+  <div class="blocks">
+    <a class="btnD block1" href="#zatemnenie17">
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник В.И. Ленину в посёлке Парголово </div>
+      <div class="block3"> Адрес: Санкт-Петербург, посёлок Парголово, Выборгское шоссе <br>
+        Дата открытия: 20 апреля 1960 г<br>
+        Скульптор: А. А. Драги<br>
+        Состояние: Существует<br>
+        Материалы: бронза, серый гранит<br> </div>
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie18">
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Декоративный бассейн «Слон любит чистую воду» </div>
+      <div class="block3"> Адрес: просп. Тореза, 100, Санкт-Петербург <br>
+        Дата открытия: 1972 г<br>
+        Скульптор: Прикот Георгий Федорович<br>
+        Состояние: Существует<br>
+        Материалы: шамот, мозайка<br> </div>  
+    </a>
+  </div>
+  </div>
+
+  <div class="headtopOb"> 
+    <div class="headtopH">ПОСТСОВЕТСКИЙ ПЕРИОД</div>
+  </div>
+
+  <div class="bloksG">
+  <div class="blocks">
+    <a class="btnD block1" href="#zatemnenie19"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Музыкальный фонтан «Мир детям» </div>
+      <div class="block3"> Адрес: Проспект Энгельса д. 154<br>
+        Дата открытия: 21 сентября 2015 г<br>
+        Скульптор: Константин Гарапач<br>
+        Состояние: Существует<br>
+        Материалы: бронза, серый гранит<br> </div>
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie20"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Музыкальный фонтан «Времена года» </div>
+      <div class="block3"> Адрес: Проспект Энгельса д. 154 <br>
+        Дата открытия: 7 сентября 2014 г<br>
+        Скульптор: Константин Гарапач<br>
+        Состояние: Существует<br>
+        Материалы: бронза, серый гранит<br> </div>
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie21"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник кошке блокадного Ленинграда </div>
+      <div class="block3"> Адрес: ул. Композиторов, д. 4 <br>
+        Дата открытия: сентябрь 2016 г<br>
+        Скульптор: Наталья Рысева <br>
+        Состояние: Существует<br>
+        Материалы: бронза, золото, дерево<br> </div>
+    </a>
+  </div>
+  </div>
+
+  <div class="bloksG">
+  <div class="blocks">
+    <a class="btnD block1" href="#zatemnenie22" > 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Шостаковичу </div>
+      <div class="block3"> Адрес: Санкт-Петербург, угол пр. Энгельса и ул. Шостаковича<br>
+        Дата открытия: 25 сентября 2009 г<br>
+        Скульптор: Константин Гарапач<br>
+        Состояние: Существует<br>
+        Материалы: бронза, серый гранит<br> </div>
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie23"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Военным дрессировщикам и служебным собакам Ленинградского фронта </div>
+      <div class="block3"> Адрес: Санкт-Петербург, пр. Тихорецкий, д. 37 (Парк Сосновка) <br>
+        Дата открытия: 12 мая 2017 г<br>
+        Скульптор: Александр Чернощеков<br>
+        Состояние: Существует<br>
+        Материалы: бронза, красный гранит<br> </div>
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie24"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Скульптура Каменный гребец </div>
+      <div class="block3"> Адрес: Санкт-Петербург, ул. Большая Озерная, д. 55 <br>
+        Дата открытия: 17 мая 2003 г<br>
+        Скульптор: Д. Д. Каминкер<br>
+        Состояние: Существует<br>
+        Материалы: серый гранит<br> </div>
+    </a>
+  </div>
+  </div>
+
+
+  <div class="bloksG">
+  <div class="blocks">
+    <a class="btnD block1" href="#zatemnenie25"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Петру I на Большом Сампсониевском </div>
+      <div class="block3"> Адрес: Санкт-Петербург, пр. Большой Сампсониевский, д. 41 <br>
+        Дата открытия: 2003 г<br>
+        Скульптор: М. М. Антокольский<br>
+        Состояние: Существует<br>
+        Материалы: бронза, красный гранит<br> </div>
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie26">
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник Сергею Есенину </div>
+      <div class="block3"> Адрес: ул. Есенина, 1 (ст. м. «Озерки») <br>
+        Дата открытия: 7 октября 2009 г<br>
+        Скульптор: Альберт Серафимович Чаркин<br>
+        Состояние: Существует<br>
+        Материалы: бронза, красный гранит<br> </div>
+    </a>
+
+    <a class="btnD block1" href="#zatemnenie27"> 
+      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="250"/></div>
+      <div class="block2"> Памятник шарманщику </div>
+      <div class="block3"> Адрес: Санкт-Петербург, ш. Фермское, д. 41 <br>
+        Дата открытия: 2015 г<br>
+        Скульптор: -<br>
+        Состояние: Существует<br>
+        Материалы: бронза<br> </div> 
+    </a>
+  </div>
+  </div>
+
+  <div class="headtopDown"> 
+    <div class="headtopDownH"> 
+      <p>N</p>
+      <P>N</P>
+    </div>
+  </div>
+
+  <div id="zatemnenie1">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="..\..\photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Виллие Я. В.
+          <div class="blockM">Адрес: Боткинская ул., 20, сад Военно-медицинской академии<br>
+            Скульптор: Иенсен Давид Иванович<br>
+            Архитектор: Штакеншнейдер Андрей Иванович<br>
+            Мастер-каменщик: Балушкин<br>
+
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1-2YIK4TSrg2g-ZOXb4BgXQE8KHQTd5w&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Виллие Я. В. -  монумент военному врачу, председателю Медико-хирургической академии в 1808-1838 гг, участнику Отечественной войны 1812 года и организатору военно-медицинского дела в российской армии.
+          <p></p>
+          Памятник Я. В. Виллие является объектом культурного наследия федерального значения и открыт 9 декабря 1859 г. Памятник высотой 8 м (высота скульптуры — 2 м, высота постамента — 6 м), состоящий из бронзы, серого полированного гранита, красного кованого гранита. 
+          <p></p>
+          Надписи: на постаменте с тыльной стороны врезными золочеными знаками: Лейб-Медику / Действительному / Тайному Советнику / Баронету Виллие.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie2">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Боткину С.П.
+          <div class="blockM">Адрес: Боткинская ул., 20<br>
+            Скульптор: Беклемишев Владимир Александрович<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=10pgl9B0pcAW_j4VBse4VqXtPPSWewWY&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Боткину С.П. - постамент, открытый 25 мая 1908 г., на котором лицом к зданию стоит С. П. Боткин. На нём надет сюртук, а голова немного склонена. Его руки заложены за спину, в одной из них стетоскоп. Скульптура (высотой — 2,5 м.) отлита из бронзы, а пьедестал из полированного красного гранита (высотой — 1,5 м.). 
+          На лицевой стороне вырезаны золоченые надписи: Профессор / Сергей Петрович / Боткин. / 1832–1889.
+          <p></p>
+          Боткин Сергей Петрович - врач, общественный деятель, создатель крупнейшей школы клиницистов, из-за него была открыта бесплатная больница имени Боткина.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie3">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Скамья Блока(Пушкина)
+          <div class="blockM">Адрес: ул. Вологдина, Санкт-Петербург, Шуваловский парк<br>
+            Автор: С. Кричинский<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1zjcBtYpZFNKHc745hbQu84Cswu4uuYc&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Скамья Блока (Пушкина)  – большая постройка, выполненная в стиле модернизированной неоклассики.
+          <p></p>
+          Строгие пилоны с нишами, верх спинки с двумя навершиями по краям выполнены из известняка. 
+          Строги, даже подчеркнуто суровы развитые ниши в пилонах скамьи. Сиденье скамьи было выполнено из цельной известняковой плиты, а её край был обработан в классической манере каменных карнизов.
+          <p></p>
+          Говорят, здесь часто любовались видами Блок, Римский-Корсаков, Шишкин и другие известные поэты и художники того времени. 
+          Печально, что с советских времён Каменная скамья неуклонно разрушалась и разрушается в наши дни.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie4">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Волынскому А. П., Хрущеву А. Ф., Еропкину П. М.
+          <div class="blockM">Адрес: Большой Сампсониевский пр., 41, в ограде Сампсониевского собора<br>
+            Архитектор: Щурупов Михаил Арефьевич (1815-1901)<br>
+            Скульптор: Опекушин Александр Михайлович (1838-1923)<br>
+            Художник: Солнцев Федор Григорьевич (1801-1892)<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1ZGJ78WBk_a0JjZeQiVLNXMHXYuohYBw&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Волынскому А. П., Хрущеву А. Ф., Еропкину П. М. - памятник из бронзы, гранита и чугуна, с литыми золочеными надписями с лицевой стороны установлен на общей могиле погребенных 27 июня 1740 г, а открыт 15 марта в 1886 год трём людям: 
+          А.П. Волынскому (который был кабинет-министром при дворе императрицы Анны Иоанновны. Он объединял вокруг себя патриотически настроенных деятелей, боровшихся с засильем Э. Бирона и А. Остермана.), А.Ф. Хрущёву (член кружка А.П. Волынского) и П.М. Еропкину (участник кружка А.П. Волынского, архитектор), казненные во времена бироновщины.
+          Высота памятника — 2,95 м.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie5">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Александру Матросову
+          <div class="blockM">Адрес: Санкт-Петербург, пр. Большой Сампсониевский, д. 68<br>
+            Скульптор: Л.М. Торич.<br>
+            Архитектор: Л.И. Шимаковский.<br>            
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1futXLS3U-ShGS9ZxUCKxX9kwlRx75s4&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Александру Матросову – гранитная скульптура, которая была открыта в 1968 году. Она выглядит, как фигура солдата в плаще-палатке и каске, с автоматом в правой руке, сжимающая в кулак левую руку и грозно выглядывающая в сторону. 
+          На лицевой грани пилона-основания рельефное изображение Звезды Героя Советского Союза и надпись: "Александр Матросов". Высота памятника 3,5 метра.
+          <p></p>
+          Александр Матросов 27 февраля 1943 г. в бою под деревней Чернушки Псковской области бросился к немецкому дзоту и накрыл пулемет своим телом, спасая жизни товарищей. 
+          Закрыв амбразуру, он принес победу своему подразделению и подал пример самопожертвования во имя Великой Победы.
+          <p></p>
+          Александр Матросов был посмертно награжден почетным званием Героя Советского Союза.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie6">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник военным медикам
+          <div class="blockM">Адрес: Санкт-Петербург, пл. Военных медиков<br>
+            Руководителем проекта: И.Г. Уралов.<br>
+            Архитектор: В.С. Васильковский, Ю.К. Митюрев и Н.Б. Митюрева.<br>
+            Скульптор: Б.А. Петров.<br>
+            </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1zsNL6H3jCmzVSlsdxAV4BvH9jNhFWxo&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник военным медикам - мемориальный павильон из серого гранита, внутри которого находятся бронзовые композиции из щитов с пиками, на щитах изображены символы военных медиков, находящийся на площади Военных Медиков на пересечении Большого Сампсониевского проспекта и Боткинской улицы открыт 8 мая 1996 года. 
+          На фасаде написано: «Военным медикам, павшим в войнах». На щитах: «Многих воителей стоит один врачеватель искусный» (Гомер) и «Профессия врача — это подвиг. Она требует самоотвержения, чистоты души и чистоты помыслов» (А. П. Чехов). А на кресте: «Тем, кто пожертвовал собой. Тем, кто последует за ними».
+          <p></p>
+          Памятник стал знаком благодарности и почтения всем медикам, спасавшим жизни защитников и жителей блокадного Ленинграда.
+          <p></p>
+          Свое нынешнее название площадь получила 7 мая 1996 г, а 8 мая 1996 г, была торжественно открыта.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie7">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Л. А. Орбели
+          <div class="blockM">Адрес: Тореза пр., 44, НИИ эволюционной физиологии и биохимии им. И.М. Сеченова<br>
+            Скульптор: Епифанов Дмитрий Михайлович<br>
+            Архитектор: Шретер Логин Дюдвигович<br>
+            </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1JOTj3gWf6_T2hfglN3UzgFsHyQoJTDs&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Л. А. Орбели - монумент-бюст, посвященный ученому, который совершил огромный вклад в развитие науки, установленный 6 ноября в 1969 году.
+          <p></p>
+          Орбели Левон Абгарович - это академик, физиолог, Герой Социалистического Труда. Скульптор изобразил ученого за кафедрой во время выступления. 
+          Бронзовая фигура Орбели установлена на высоком гранитном столбе, опирающемся на гранитную площадку. На лицевой стороне столба надпись: «Академик Леон Абгарович Орбели». Высота бюста — 1,5 м, высота постамента — 3 м.
+          <p></p>
+          Памятник сооружен по инициативе научной общественности Ленинграда и установлен 6 ноября 1969 года перед зданием института эволюционной физиологии и биохимии имени Сеченова, где долгие годы работал знаменитый физиолог.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie9">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Маринеско А. И.
+          <div class="blockM">Адрес: Санкт-Петербург, пр. Большой Сампсониевский, д. 28<br>
+            Скульптор: М. Анануров<br>
+            Архитектор: А. Чернов<br>
+            </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=11zHiEM2rtOp0WElnZHNSfWabjoXYMj0&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Маринеско А. И. – Памятник легендарному командиру подводной лодки, потопившей фашистский суперлайнер «Вильгельм Густлоф». Посмертно удостоен звания Героя Советского Союза.
+          <p></p>
+          Бюст установлен на территории завода 7 мая 1990 г. по инициативе Комитета защиты А. И. Маринеско и коллектива завода, на котором после Великой Отечественной войны работал герой. 
+          Памятник сделан из бронзы и красного полированного гранита. Высота бюста 1,2 м, высота постамента 1,8 м.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie10">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Бюст героя Советского Союза Ф. А. Смолячкова
+          <div class="blockM">Адрес: Санкт-Петербург, ул. Смолячкова, д. 11<br>
+            Архитектор: В. А. Потапова.<br>
+            Скульптор: А. А. Киселева.<br>
+            </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1cZoBvsnG8NCbg5v607OThGFHI_AoCyQ&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Бюст героя Советского Союза Ф. А. Смолячкова – памятник Герою Советского Союза Ф.А. Смолячкову, который был зачинателем движения снайперов на Ленинградском фронте, рядовым 13 Стрелковой дивизии. 
+          При защите Ленинграда уничтожил 125 фашистов, но погиб в районе Пулково 15 января 1942 года от пули немецкого снайпера.
+          <p></p>
+          22 февраля 1968 г был торжественно установлен Бюст Смолячкова высотой 0,7 м, изображен в стеганой куртке, шапке-ушанке, с винтовкой за плечом. Фигура установлена постаменте высотой 2,5 м, на лицевой грани которого крепится изображение ордена "Золотая Звезда".
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie11">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Иоффе А. Ф.
+          <div class="blockM">Адрес: Политехническая ул., 26, перед зданием ФТИ им. А.Ф. Иоффе<br>
+            Скульптор: Гликман Гавриил Давидович<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1njLRKm3MYBVWSwF_M55g-wVoYGABH98&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Иоффе А. Ф. – бюст, посвященный Иоффу Абраму Федоровичу – выдающемуся советскому физику, академику, Герою Социалистического Труда, основателю и руководителю Физико-технического института.
+          <p></p>
+          Памятник поставлен 21 июля 1964 г. перед зданием Физико-технического института им. А. Ф. Иоффе, который он долгое время возглавлял, по инициативе его сотрудников. Голова ученого высотой 0,8 м исполнена из мрамора, а постамент высотой 1,7 м - из гранита. 
+          На мраморном постаменте расположена табличка с памятной надписью о том, кому посвящен бюст. Территория вокруг памятника выложена изысканной плиткой
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie12">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Константинову Б. П.
+          <div class="blockM">Адрес: Политехническая ул., 26, перед зданием ФТИ им. А.Ф. Иоффе<br>
+            Скульптор: Аникушин Михаил Константинович<br>
+            Архитектор: Гепнер Филипп Аронович<br>
+
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1d3wRxGMijJJRL-V1ON7tOerfrvdtpM0&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Константинову Б. П. – бюст академику Борису Павловичу Константинову - выдающемуся советскому ученому-физику, Герою Социалистического Труда, вице-президенту Академии наук СССР.
+          <p></p>
+          Памятник сооружен у здания Физико-технического института им. А. Ф. Иоффе 10 ноября 1975 г. Бронзовый бюст высотой 0,6 м установлен на столбе красного полированного гранита высотой 1,8 метра. 
+          На его лицевой грани золоченая надпись о том, кому посвящен бюст.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie13">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Лётчикам
+          <div class="blockM">Адрес: Санкт-Петербург, улица Жака Дюкло, дом 22, лесопарк Сосновка.<br>
+            Скульптор: Н. А. Карпова, архитекторы Л. И. Матвеева и В. В. Виноградова.<br>
+            Конструктор: Б. М. Винер.<br>
+            </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1qwFqLFXe376OgjdCFY7DBnkC3jLCTyM&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Лётчикам – мемориал установленный 23 февраля в 1978 году на месте расположения аэродрома в парке Сосновка, который функционировал в годы блокады Ленинграда и Великой Отечественной войны, в честь фронтовых защитников неба над Ленинградом.
+          <p></p>
+          Он представляет собой две большие стелы, символизирующие крылья, между которыми стоит 8-метровый обелиск. Обелиск имеет трехступенчатое основание и украшен бронзовым барельефом, который изображает лицо лётчика с напряженным, вглядывающимся в даль взглядом. 
+          На бетонных стелах можно прочитать памятный текст с благодарностью защитникам. Весь монумент выполнен из бетона.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie14">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Кладбище «Дом лесника»
+          <div class="blockM">Адрес: Санкт-Петербург, дорога в Каменку, д. 37.<br>
+            Обслуживающая организация: Общество с ограниченной ответственностью «СИЭМ»<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1YVnRHG1WaZBABUsprvMfuZFH8Xh3_HQ&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Кладбище «Дом лесника» - небольшой лесной некрополь, принявший первых погибших при защите города на Неве в годы Великой Отечественной войны.
+          <p></p>
+          Здесь захоронены в основном летчики, так как на этом месте  в 1941-1944 гг. был полевой аэродром. В братских могилах захоронены 31 человек, они отмечены памятными обелисками. 
+          В центре установлен обелиск, с изображением звезды. На гранитном постаменте выбита памятная надпись. На кладбище находится 21 именная раковина и две гранитные плиты с фамилиями экипажей, погибших в катастрофах при взлете.
+          <p></p>
+          В настоящее время здесь разрешены повторные погребения в границах участков с могилами ранее похороненных родственников.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie15">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Героям Октябрьской революции
+          <div class="blockM">Адрес: Новороссийская ул., 1, парк Лесотехнической академии<br>
+            Архитектор: И.А. Фомин, Визенталь Юрий Александрович<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1sGMM7TNRbBAtqwh9CxeJlD0mmSjZpJc&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Героям Октябрьской революции – памятник в честь красногвардейцев, погибших в октябре 1917 г. в боях с войсками Керенского под Пулковом и Красным Селом, позже и других участников Гражданской войны.
+          Здесь же были похоронены выдающиеся деятели Октябрьской революции Урицкий, Володарский и др.
+          <p></p>
+          Памятник выполнен из серого кованного гранита и бронзы. 
+          На торцах стены поэтические тексты, сочиненные А. Луначарским: "Не жертвы-герои лежат под этой могилой. Не горе, а зависть рождает судьба ваша в сердцах всех благородных потомков. В красивые страшные дни славно выжили и умирали прекрасно".
+          <p></p>
+          Первоначально в 1927 г. на братской могиле на холме был установлен временный памятник, выполненный из дерева. В 1953 г. заменен гранитным обелиском. В 1967 г. установлена плита с именами погибших. Высота памятника составляет 5,5 м.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie16">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Первостроителям Санкт-Петербурга
+          <div class="blockM">Адрес: Санкт-Петербург, Сампсониевский сад Сампсониевского собора<br>
+            Скульптор: В. Б. Бухаев.<br>
+            Художник: М. М. Шемякина.<br>
+            Строитель: ООО «Возрождение»<br>
+            </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=11_wrs6tw5OAMif3enAp5qmSUT1sYHmc&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Первостроителям Санкт-Петербурга - Монумент-мемориал первым архитекторам Санкт-Петербурга в 17 октября 1995г. 
+          Памятник напоминает окно из розового гранита, латуни и бронзовых накладных рельефов, с восточной стороны размещался бронзовый стол с расположенными на нем планом Петербурга, подсвечником, трубкой и черепом. Высота памятника достигает 5 метров.
+          <p></p>
+          В 2000 г. памятник был уничтожен вандалами, а все бронзовые части утрачены. Вырванный из контекста, он стал памятником не первостроителям, а пренебрежительному отношению к их памяти
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie17">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник В.И. Ленину в посёлке Парголово
+          <div class="blockM">Адрес: Санкт-Петербург, посёлок Парголово, Выборгское шоссе<br>
+            Архитектор: А. А. Драги<br>
+            Скульптор: В. Б. Пинчук<br>
+            </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1LWNr0YJVBttKlWwtdLpz1tDZtEoZemU&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник В.И. Ленину в посёлке Парголово – скульптура, сооруженная в поселке Парголово на развилке Выборгского шоссе и улицы Ломоносова по решению Ленгорисполкома сооружен памятник В. И. Ленину в 1959 году.
+          <p></p>
+          Открытие состоялось 20 апреля 1960 года. Памятник отлит на заводе «Монументскульптура». Он состоит из бронзы, серого полированного гранита. На постаменте с лицевой стороны врезными золочеными знаками выбита надпись: Ленин.
+          Высота скульптуры — 2,5 м, высота постамента – 3,5 м.
+          <p></p>
+          В 1974 году в связи с реконструкцией шоссе памятник перенесен от дороги на 100 метров.
+          <p></p>
+          15 декабря 2006 года неизвестные вандалы зацепили памятник тросом, хотели увезти, но не смогли – он оказался слишком тяжел, а 1 августа 2008 года обновили бронзового Ильича и торжественно водрузили на постамент.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie18">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Декоративный бассейн «Слон любит чистую воду»
+          <div class="blockM">Адрес: просп. Тореза, 100, Санкт-Петербург<br>
+            Автор: Прикот Георгий Федорович<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1BOmoLgCbcRnzCIQAVUjvP-F2NQXWb2s&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Дкоративный бассейн - скульптура, открытая в 1972 году выглядит так, что будто слоник находится на водопое.
+          <p></p>
+          Он выполнен из шамота — огнеупорной глины, обожжённой до некоторой степени спекания и потере пластичности. В дополнение, скульптор покрыл слоника мозаикой и соорудил по такой же схеме бассейн перед ним.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie19">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Музыкальный фонтан «Мир детям»
+          <div class="blockM">Адрес: Проспект Энгельса д. 154.<br>
+            Автор: Константин Гарапач<br>
+          </div>
+        </div>
+        <div class="miniMap"><iframe src="https://www.google.com/maps/d/u/1/embed?mid=1Xj2-RJSbg2UIcwam2mqWEbKULKbK3Ds&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Поющий фонтан «Мир детям» — архитектурный проект, который был установлен в сентябре 2015 года к Международному дню мира на площади у "Гранд Каньона".
+          <p></p>
+          Фонтан отражает тему дружбы народов: дети из разных стран объединились в хороводе и выпускают в небо голубя, как светлый символ мира, веселясь под популярную детскую музыку. 
+          Открытие приурочено к Международному дню мира. Константин Гарапач постарался придать каждой бронзовой фигуре ребенка уникальный характер.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie20">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Музыкальный фонтан «Времена года»
+          <div class="blockM">Адрес: Проспект Энгельса д. 154.<br>
+            Автор: Константин Гарапач<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1Wv4ZVeCXKmgz3Aw3UfSwSrqNrgcsPS8&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Музыкальный фонтан «Времена года» —скульптурная композиция, открытая 7 сентября 2014 г.
+          <p></p>
+          Она состоит из четырех гранитных колонн разных по величине. На их вершинах находятся древнегреческие нимфы, олицетворяющие собой времена года. 
+          Это Анатоле — богиня весны, Талло — богиня лета и Карпо — богиня осени, а имя четвертой нимфы зимы — танцовщицы неизвестно. В центре, между скульптурами, бьют струи фонтана под такт классической музыки.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie21">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник кошке блокадного Ленинграда
+          <div class="blockM">Адрес: ул. Композиторов, дом 4<br>
+            Автор: Наталья Рысева - руководитель студии художественного литья.<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1mgiz6WIaHAGVfJIi2YoCDbevMmSvIcY&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник блокадной кошке - фигурка кошки, сидящая на стуле, будто под пригревающим светом торшера.
+          <p></p>
+          Её установили жильцы дома № 4 в сентябре 2016 года по инициативе Натальи Рысевой. Открытие памятника приурочили к дню 73-й годовщины Победы в Великой Отечественной войне. 
+          Монумент появился в честь того, что эти домашние животные помогли горожанам пережить блокаду Ленинграда 1941 – 1943 гг.
+          <p></p>
+          Кошки стали единственной эффективной защитой от грызунов, которые в условиях холодных голодных блокадных зим теряли страх и активно пытались нападать на зернохранилища и продуктовые склады даже в присутствии людей.
+          <p></p>
+          Памятник посвящён и многим погибшим в годы блокады кошкам Ленинграда. Их в городе стало настолько мало, что по окончании войны в город кошек завозили специально, привозя их из Сибири и других регионов страны.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie22">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Шостаковичу
+          <div class="blockM">Адрес: СПб., угол пр. Энгельса и ул. Шостаковича<br>
+            Автор: Константин Гарапач.<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1lfdM4ImUovD5ijDzyNqBKFClIS5X5_c&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Шостаковичу - монумент, увековечивший образ композитора Дмитрия Шостаковича.
+          <p></p>
+          Торжественное открытие памятника состоялось на Сквере Шостаковича 25 сентября 2009 г. в день празднования 103-летней годовщины со дня рождения выдающегося композитора.
+          <p></p>
+          Трехметровая скульптура изображает Шостаковича сидящим на скамье среди нотных альбомов, в момент написания Седьмой (Ленинградской) симфонии.
+          <p></p>
+          Планировалось, что возле памятника будут проходить открытые концерты учеников петербургских музыкальных школ.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie23">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Военным дрессировщикам и служебным собакам Ленинградского фронта
+          <div class="blockM">Адрес: Санкт-Петербург, пр. Тихорецкий, д. 37 (Парк Сосновка)<br>
+            Автор: Александр Чернощеков.<br>
+            Архитектор: В.В. Цехомский.<br>
+            </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1lS1QzIyrlI-hZyaTAmEg8ZsKT4JNw_w&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Военным дрессировщикам и служебным собакам Ленинградского фронта – скульптура «Девичьей команде», так называлась учебная воинская часть 34 Отдельного инженерно-саперного батальона, организованного на базе школы-питомника, спасший с четвероногими помощниками сотни тысяч жизней бойцов. 
+          Закладной камень мемориала был установлен в декабре 2015 г, а открыт 12 мая 2017 г в парке Сосновка.
+          <p></p>
+          Памятник представляет собой фигуру девушки-сапера со служебной собакой-детектором перед боевым заданием. Образ выбран не случайно. В этой воинской части, единственной в мире, в годы войны наравне с саперами – мужчинами, вожатыми служебных собак, успешно служили и женщины.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie24">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Скульптура «Каменный гребец»
+          <div class="blockM">Адрес: Санкт-Петербург, ул. Большая Озерная, д. 55<br>
+            Скульптор: Д. Д. Каминкер<br>
+            Архитектор: С. П. Одновалов<br>
+            </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1IV1yYFY0XDpJ4GkPOzIzL9vMibPMKjs&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Скульптура «Каменный гребец» – монумент, сооруженный к 300-летию Петербурга и выполненный в сером граните, диаметром описанной окружности 5,5 м, высотой 2 м был установлен 17 мая в 2003 году.
+          <p></p>
+          Скульптура представляет собой комбинацию из небольшого числа мощных грубо отесанных глыб балтийского гранита, которые изображают человека в лодке, мощно загребающего веслами. 
+          Одна из глыб символизирует лодку, две другие составляют вместе туловище гребца с головой, на котором едва проработаны черты лица, а два параллельных бруска рук сопряжены с двумя массивными брусьями-веслами.
+          <p></p>
+          «Каменный гребец» был создан благодаря сотрудничеству Комитета по градостроительству и архитектуре администрации Санкт-Петербурга, «Регионального архитектурно-художественного фонда», объединения «Деревня художников» и при финансовой поддержке «Альфа-Банка».
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie25">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Петру I на Большом Сампсониевском
+          <div class="blockM">Адрес: Санкт-Петербург, пр. Большой Сампсониевский, д. 41<br>
+            Архитектор: Н. Е. Лансере<br>
+            Скульптор: М. М. Антокольский<br>
+            </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1dUktVYzHoBwmKy0bEuP1AQxRUt_jUX0&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Петру I на Большом Сампсониевском – копия оригинального памятника была открыта в 2003 году сподвижника Петра Великого в память 200-летия победы над шведами под Полтавой.
+          <p></p>
+          Оригинал был сооружён потомками графа Шереметьева в 1884 году. Высота статуи 250 см, высота постамента - 370 см. Материал: бронза. Царь выполнен в полный рост в мундире Преображенского полка, с орденом Андрея Первозванного на груди. Левая рука Петра держит подзорную трубу и, одновременно, придерживает палаш. Правой рукой царь опирается на неизменную трость. 
+          Площадка памятника ограждена цепями и выложена гранитными плитками. Надпись на доске-картуше, на лицевой стороне памятника гласит: «Петру Великому», «А о Петре ведайте, что ему жизнь не дорога - жила бы только Россия».
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie26">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник Сергею Есенину
+          <div class="blockM">Адрес: ул. Есенина, 1 (ст. м. «Озерки»).<br>
+            Скульптор и художник: Альберт Серафимович Чаркин.<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1nyS8VszgvWhHy6-P6yIBD0vD5TYQiVQ&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник Сергею Есенину – памятник, открытый в честь 115 годовщины со дня рождения поэта 7 октября 2009 года. Памятник изображает С. Есенина уже в зрелом возрасте, когда он присел отдохнуть, а в руках у него веточка рябины.
+          Картина отражает деревенские корни поэта и его любовь к природе.
+          <p></p>
+          Скульптура отлита из бронзы, а вымощенная красной плиткой площадка под памятник окружена высаженными берёзками. Высота памятника 3,1 м.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie27">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятник шарманщику
+          <div class="blockM">Адрес: Санкт-Петербург, ш. Фермское, д. 41,<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1no3yca_5OKip7Ut-iTyH1IDk8Qciifw&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятник шарманщику - Скульптура человека из бронзы, крутящая ручку шарманки в компании пса. Памятник установлен на этом месте в 2015 году, потому что с XIX века здесь располагался блошиный рынок.
+          <p></p>
+          Шарманщики выступали тут из-за обилия публики, которая пополнялась пассажирами железнодорожного вокзала.
+        </div>
+      </div>
+
+    <br>
+      
+    </div>
+  </div>
+
+  <div id="zatemnenie8">
+    <div id="okno"> 
+      
+      <div class="photo">
+        <div class="inf_ob_pam_photo">
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="auto" height="100%"/> </a>
+          <a class="inf_ob_pam_1"><img src="..\..photos\Do_CCCR\Ville_I\Ville_I_2.jpg" width="auto" height="100%"/> </a>
+          <a href="#q" class="close"><img src="photos\krest.png" width="100%" height="100%"/></a>
+        </div>
+      </div>
+      
+      <div class="underMAP">
+        <div class="blockN">Памятный знак на месте дуэли К. П. Чернова и В. Д. Новосильцева
+          <div class="blockM">Адрес: Санкт-Петербург, парк Лесотехнической академии<br>
+            Архитектор: Васильковский Владимир Сергеевич<br>
+          </div>
+        </div>
+        <div class="miniMap"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=18f-4FYExBugILAsG-3pd0cF2jv_fd_s&ehbc=2E312F&noprof=1" width="100%" height="100%"></iframe></div>
+      </div>
+
+      <div class="inf_ob_pam">
+        <div class="inf_ob_pam_opis">
+          Памятный знак на месте дуэли К. П. Чернова и В. Д. Новосильцева – Памятный знак представляет собой стелу из серого гранита, вытесанного в стелу и тумбу с надписью, высотой 2,5 м на месте, где состоялась одна из дуэлей Санкт-Петербурга между К. П. Черновым (член Северного тайного общества) и В. Д. Новосильцевым (флигель-адъютанта) 10 (22) сентября в 1825 г. 
+          10 сентября 1988 года по инициативе Лесотехнической академии и директора библиотеки Т. А. Зуевой на месте дуэли в присутствии потомков декабриста Чернова был установлен памятный знак.div>
+      </div>
+
+      <br>
+      
+    </div>
+  </div>
+
+</div>
+
+</body>
+
 </html>
