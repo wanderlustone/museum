@@ -6,7 +6,7 @@ Online HTML, CSS and JavaScript editor to run code online.
 
 <head>
   <style>
-    .backP{
+.backP{
     width: 100%;
     border: 1px solid lightgray;
     background-color: lightgray;
@@ -131,7 +131,7 @@ Online HTML, CSS and JavaScript editor to run code online.
     }
 
     .map{
-    width: 100%;
+    width: 99.8%;
     padding: 0px;
     border: 0px solid black;
     background-color: #ffffff;
@@ -139,6 +139,17 @@ Online HTML, CSS and JavaScript editor to run code online.
     padding-left: 0px;
     margin-top: 50px;
     padding-right: 0px;
+    }
+
+    .mapM{
+    width: 99.8%;
+    padding: 0px;
+    border: 0px solid black;
+    background-color: #ffffff;
+    height: 600px;
+    padding-left: px;
+    margin-top: 5px;
+    padding-right: px;
     }
 
     .headtopOb{
@@ -160,7 +171,7 @@ Online HTML, CSS and JavaScript editor to run code online.
     }
 
     .block1{
-    width: 350px;
+    width: 320px;
     padding: 0px;
     border: 5px solid lightgrey;
     background-color: brown;
@@ -176,14 +187,13 @@ Online HTML, CSS and JavaScript editor to run code online.
     .block2{
     width: 100%;
     padding: px;
-    border: 3px solid brown;
+    border: 3px solid goldenrod;
     border-left: 0px;
     border-right: 0px;
-    background-color: brown;
+    background-color: goldenrod;
+    height: 45px;
     margin-top: -5px;
-    color: goldenrod;
-    text-align: center;
-    font-size: 150%;
+    overflow-y: hidden;
     }
 
     .block3{
@@ -194,6 +204,7 @@ Online HTML, CSS and JavaScript editor to run code online.
     background-color: burlywood;
     border-left: 0px;
     border-right: 0px;
+    height: 23%;
     border-top: 0px;
     font-size: 15px ;
     overflow-y: hidden;
@@ -225,7 +236,6 @@ Online HTML, CSS and JavaScript editor to run code online.
     margin-left: 5%;
     margin-top: -14px;
     }
-
   
     #zatemnenie1 {
     background: rgba(102, 102, 102, 0.5);
@@ -642,369 +652,127 @@ Online HTML, CSS and JavaScript editor to run code online.
 
  .photomon{
     text-align: center;
-    width: 100%;
-    height: 400px;
     overflow: hidden;
  }   
- @media screen and (max-width: 1280px) { #okno {width: 100%; height: 100%;} }
- @media screen and (min-width: 1280px) { .headtopH {font-size: 350%;} }
- @media screen and (min-width: 1280px) { .headtoptopHT {font-size: 180%;} }
- @media screen and (max-width: 1300px) { .close {margin-left: 90%; margin-top: 60px;} }
- @media screen and (max-width: 1300px) { .blockM {margin-top: 16%;} }
+ 
+ .photomon{
+    text-align: center;
+    overflow: hidden;
+ }   
+.blocki_mest {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    }
+.underMAP1{
+    width: 100%;
+    padding: 0px;
+    border: 0px solid black;
+    background-color: #ffffff;
+    padding-left: 0px;
+    margin-top: 0px;
+    padding-right: 0px;
+    }
+.block_mesta{
+    width: 100%;
+    height: 40px;
+    margin-right: px;
+    padding: 0px;
+    border: 2px solid goldenrod;
+    background-color: burlywood;
+    padding-left: px;
+    margin-top: px;
+    margin-left: -1px;
+    font-size: 22px;
+    color: black;
+    text-decoration-line: none;
+    }
+    @media screen and (max-width: 1280px) { #okno {width: 100%; height: 100%;} }
+    @media screen and (min-width: 1280px) { .headtopH {font-size: 350%;} }
+    @media screen and (min-width: 1280px) { .headtoptopHT {font-size: 180%;} }
+    @media screen and (max-width: 1300px) { .close {margin-left: 90%; margin-top: 60px;} }
+    @media screen and (max-width: 1300px) { .blockM {margin-top: 16%;} }
+    @media screen and (max-width: 1300px) { .block_mesta {height: 80px;} }
     </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <title>ГЛАВНАЯ</title>
+  <title>МАРШРУТЫ</title>
 </head>
 
 <body>
 <div class="backP">
 
-
   <div class="headtop">
     <div class="blocks">
       <a class="btnDT headtoptopHT" href="index.html"> Проект "Музей под открытым небом: скульптуры и памятники Выборгского района СПБ" </a>
-      <a class="btn headtoptopH" href="routes.html"> Маршруты </a>
+    </div>
+  </div>
+    
+    
+  <div class="map"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1h9dllPvWFaNpQeRNb-Ea6AjLOKUMQIs&ehbc=2E312F&noprof=1" width="100%" height="600px"></iframe> </div>
+    
+
+  <div class="headtopOb"> 
+    <div class="headtopH">МАРШРУТ "ПАМЯТЬ О ГЕРОЯХ СССР"</div>
+  </div>
+
+  <div class="mapM"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1vpan2ogVKbLJ8zCOHDs1cA1QoY09NJo&ehbc=2E312F&noprof=1" width="100%" height="600"></iframe> </div>   
+  <div class="underMAP1">
+    <div class="blocki_mest">
+      <a class="btn block_mesta" href="#zatemnenie21">1.Памятник кошке блокадного Ленинграда</a>
+      <a class="btn block_mesta" href="#zatemnenie23">2.Памятник Военным дрессировщикам и служебным собакам Ленинградского фронта</a>
+      <a class="btn block_mesta" href="#zatemnenie13">3.Памятник Лётчикам</a>
+      <a class="btn block_mesta" href="#zatemnenie7">4.Памятник Л. А. Орбели</a>
+      <a class="btn block_mesta" href="#zatemnenie11">5.Памятник Иоффе А. Ф.</a>
+      <a class="btn block_mesta" href="#zatemnenie12">6.Памятник Константинову Б. П.</a>
+      <a class="btn block_mesta" href="#zatemnenie15">7.Памятник Героям Октябрьской революции</a>
+      <a class="btn block_mesta" href="#zatemnenie5">8.Памятник Александру Матросову</a>
+      <a class="btn block_mesta" href="#zatemnenie10">9.Бюст героя Советского Союза Ф. А. Смолячкова</a>
     </div>
   </div>
 
 
-  <div class="map"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1h9dllPvWFaNpQeRNb-Ea6AjLOKUMQIs&ehbc=2E312F&noprof=1" width="100%" height="600"></iframe> </div>
-  
+  <div class="headtopOb"> 
+    <div class="headtopH">МАРШРУТ "ЛЕГКАЯ ПРОГУЛКА"</div>
+  </div>
+
+  <div class="mapM"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1Q8JJloWMzqrQpWzLH28Ilt2Y1YvvURA&ehbc=2E312F&noprof=1" width="100%" height="600"></iframe> </div>   
+  <div class="underMAP1">
+    <div class="blocki_mest">
+      <a class="btn block_mesta" href="#zatemnenie1">1.Памятник Виллие Я. В.</a>
+      <a class="btn block_mesta" href="#zatemnenie2">2.Памятник Боткину С.П.</a>
+      <a class="btn block_mesta" href="#zatemnenie6">3.Памятник военным медикам</a>
+      <a class="btn block_mesta" href="#zatemnenie9">4.Памятник Маринеско А. И.</a>
+      <a class="btn block_mesta" href="#zatemnenie4">5.Памятник Волынскому А. П., Хрущеву А. Ф., Еропкину П. М.</a>
+      <a class="btn block_mesta" href="#zatemnenie25">6.Памятник Петру I на Большом Сампсониевском</a>
+      <a class="btn block_mesta" href="#zatemnenie10">7.Бюст героя Советского Союза Ф. А. Смолячкова</a>
+    </div>
+  </div>
+
 
   <div class="headtopOb"> 
-    <div class="headtopH"> ДОСОВЕТСКИЙ ПЕРИОД</div>
+    <div class="headtopH">МАРШРУТ "ВДОХНОВЕНИЕ"</div>
   </div>
 
-  <div class="bloksG">
-  <div class="blocks">
-      <a class="btnD block1" href="#zatemnenie1"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Виллие Я. В. </div>
-      <div class="block3"> Адрес: Боткинская ул., 20, сад Военно-медицинской академии <br>
-        Дата открытия: 9 декабря 1859 г<br>
-        Скульптор: Иенсен Давид Иванович<br>
-        Состояние: существует<br>
-        Материалы: бронза, золото, серый гранит, красный гранит<br>
-      </div>    
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie2"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Боткину С.П.</div>
-      <div class="block3"> Адрес: Боткинская ул., 20 <br>
-        Дата открытия: 25 мая 1908 г<br>
-        Скульптор: Беклемишев Владимир Александрович<br>
-        Состояние: существует<br>
-        Материалы: бронза, золото, красный гранит<br> </div>
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie3"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Скамья Блока(Пушкина)</div>
-      <div class="block3"> Адрес: ул. Вологдина, Санкт-Петербург, Шуваловский парк <br>
-        Дата открытия: -<br>
-        Скульптор: -<br>
-        Состояние: разрушается<br>
-        Материалы: известняк, кирпич<br> </div>
-    </a>  
+  <div class="mapM"> <iframe src="https://www.google.com/maps/d/u/1/embed?mid=17Ga9P9gXIfJ6Q7mRZRnkEuxH_yZb-LE&ehbc=2E312F&noprof=1" width="100%" height="600"></iframe> </div>   
+  <div class="underMAP1">
+    <div class="blocki_mest">
+      <a class="btn block_mesta" href="#zatemnenie22">1.Памятник Шостаковичу</a>
+      <a class="btn block_mesta" href="#zatemnenie20">2.Музыкальный фонтан «Времена года»</a>
+      <a class="btn block_mesta" href="#zatemnenie19">3.Музыкальный фонтан «Мир детям»</a>
+      <a class="btn block_mesta" href="#zatemnenie26">4.Памятник Сергею Есенину</a>
+      <a class="btn block_mesta" href="#zatemnenie18">5.Декоративный бассейн «Слон любит чистую воду»</a>
+      <a class="btn block_mesta" href="#zatemnenie27">6.Памятник шарманщику</a>
+    </div>
   </div>
-  </div>
-
-  <div class="bloksG">
-  <div class="blocks">
-    <a class="btnD block1" href="#zatemnenie4">
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Волынскому А. П., Хрущеву А. Ф., Еропкину П. М. </div>
-      <div class="block3"> Адрес: Большой Сампсониевский пр., 41, в ограде Сампсониевского собора <br>
-        Дата открытия: 15 марта 1886 г<br>
-        Скульптор: Опекушин Александр Михайлович <br>
-        Состояние: Существует<br>
-        Материалы: бронза, чугун, золото, красный гранит<br> </div>
-    </a>  
-  </div> 
-  </div>
-
-  <div class="headtopOb">  
-    <div class="headtopH">СОВЕТСКИЙ ПЕРИОД</div>
-  </div>
-
-  <div class="bloksG">
-  <div class="blocks">
-    <a class="btnD block1" href="#zatemnenie5"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Александру Матросову </div>
-      <div class="block3"> Адрес: Санкт-Петербург, пр. Большой Сампсониевский, д. 68 <br>
-        Дата открытия: 1968 г<br>
-        Скульптор: Л.М. Торич<br>
-        Состояние: Существует<br>
-        Материалы: серый гранит<br> </div>  
-    </a>
-  
-    <a class="btnD block1" href="#zatemnenie6">
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник военным медикам </div>
-      <div class="block3"> Адрес: Санкт-Петербург, пл. Военных медиков <br>
-        Дата открытия: 8 мая 1996 г<br>
-        Скульптор: : Б.А. Петров<br>
-        Состояние: Существует<br>
-        Материалы: серый гранит, бронза<br> </div>     
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie7"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Л. А. Орбели </div>
-      <div class="block3"> Адрес: Тореза пр., 44, НИИ эволюционной физиологии и биохимии им. И.М. Сеченова <br>
-        Дата открытия: 6 ноября в 1969 г<br>
-        Скульптор: Епифанов Дмитрий Михайлович<br>
-        Состояние: Существует<br>
-        Материалы: бронза, серый гранит<br> </div>
-    </a>
-  </div>
-  </div>
-
-  <div class="bloksG">
-  <div class="blocks">
-    <a class="btnD block1" href="#zatemnenie8"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятный знак на месте дуэли К. П. Чернова и В. Д. Новосильцева </div>
-      <div class="block3"> Адрес: Санкт-Петербург, парк Лесотехнической академии <br>
-        Дата открытия: 10 сентября 1988 г<br>
-        Скульптор: Васильковский Владимир Сергеевич<br>
-        Состояние: существует<br>
-        Материалы: серый гранит<br> </div>   
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie9" > 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Маринеско А. И. </div>
-      <div class="block3"> Адрес: Санкт-Петербург, пр. Большой Сампсониевский, д. 28 <br>
-        Дата открытия: 7 мая 1990 г<br>
-        Скульптор: М. Анануров<br>
-        Состояние: Существует<br>
-        Материалы: бронза, красный гранит<br> </div>  
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie10">
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Бюст героя Советского Союза Ф. А. Смолячкова </div>
-      <div class="block3"> Адрес: Санкт-Петербург, ул. Смолячкова, д. 11 <br>
-        Дата открытия: 9 декабря 1859 г<br>
-        Скульптор: А. А. Киселев<br>
-        Состояние: Существует<br>
-        Материалы: бронза, серый гранит<br> </div>  
-    </a>
-  </div>
-  </div>
-
-  <div class="bloksG">
-  <div class="blocks">
-    <a class="btnD block1" href="#zatemnenie11"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Иоффе А. Ф. </div>
-      <div class="block3"> Адрес: Политехническая ул., 26, перед зданием ФТИ им. А.Ф. Иоффе <br>
-        Дата открытия: 21 июля 1964 г<br>
-        Скульптор: Гликман Гавриил Давидович<br>
-        Состояние: Существует<br>
-        Материалы: мрамор, красноый гранит, золото<br> </div>     
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie12">
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Константинову Б. П. </div>
-      <div class="block3"> Адрес: Политехническая ул., 26, перед зданием ФТИ им. А.Ф. Иоффе <br>
-        Дата открытия: 10 ноября 1975 г<br>
-        Скульптор: Аникушин Михаил Константинович<br>
-        Состояние: Существует<br>
-        Материалы: бронза, золото, красног гранит<br> </div>
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie13"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Лётчикам </div>
-      <div class="block3"> Адрес: Санкт-Петербург, улица Жака Дюкло, дом 22, лесопарк Сосновка <br>
-        Дата открытия: 23 февраля в 1978 г<br>
-        Скульптор: Н. А. Карпова<br>
-        Состояние: Существует<br>
-        Материалы: бронза, бетон<br> </div>
-    </a>
-  </div>
-  </div>
-
-  <div class="bloksG">
-  <div class="blocks">
-    <a class="btnD block1" href="#zatemnenie14" > 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Кладбище «Дом лесника» </div>
-      <div class="block3"> Адрес: Санкт-Петербург, дорога в Каменку, д. 37. <br>
-        Дата открытия: -<br>
-        Скульптор: -<br>
-        Состояние: Существует<br>
-        Материалы: бронза, золото, серый гранит, чугун<br> </div> 
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie15" > 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Героям Октябрьской революции </div>
-      <div class="block3"> Адрес: Новороссийская ул., 1, парк Лесотехнической академии <br>
-        Дата открытия: 1953 г, 1967 г <br>
-        Скульптор: -<br>
-        Состояние: Существует<br>
-        Материалы: бронза, золото, серый гранит, красный гранит<br> </div>
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie16"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Первостроителям Санкт-Петербурга </div>
-      <div class="block3"> Адрес: Санкт-Петербург, Сампсониевский сад Сампсониевского собора <br>
-        Дата открытия: 17 октября 1995 г<br>
-        Скульптор: В. Б. Бухаев<br>
-        Состояние: Существует<br>
-        Материалы: бронза, красный гранит<br> </div>
-    </a>
-  </div>
-  </div>
-
-  <div class="bloksG">
-  <div class="blocks">
-    <a class="btnD block1" href="#zatemnenie17">
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник В.И. Ленину в посёлке Парголово </div>
-      <div class="block3"> Адрес: Санкт-Петербург, посёлок Парголово, Выборгское шоссе <br>
-        Дата открытия: 20 апреля 1960 г<br>
-        Скульптор: А. А. Драги<br>
-        Состояние: Существует<br>
-        Материалы: бронза, серый гранит<br> </div>
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie18">
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Декоративный бассейн «Слон любит чистую воду» </div>
-      <div class="block3"> Адрес: просп. Тореза, 100, Санкт-Петербург <br>
-        Дата открытия: 1972 г<br>
-        Скульптор: Прикот Георгий Федорович<br>
-        Состояние: Существует<br>
-        Материалы: шамот, мозайка<br> </div>  
-    </a>
-  </div>
-  </div>
-
-  <div class="headtopOb"> 
-    <div class="headtopH">ПОСТСОВЕТСКИЙ ПЕРИОД</div>
-  </div>
-
-  <div class="bloksG">
-  <div class="blocks">
-    <a class="btnD block1" href="#zatemnenie19"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Музыкальный фонтан «Мир детям» </div>
-      <div class="block3"> Адрес: Проспект Энгельса д. 154<br>
-        Дата открытия: 21 сентября 2015 г<br>
-        Скульптор: Константин Гарапач<br>
-        Состояние: Существует<br>
-        Материалы: бронза, серый гранит<br> </div>
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie20"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Музыкальный фонтан «Времена года» </div>
-      <div class="block3"> Адрес: Проспект Энгельса д. 154 <br>
-        Дата открытия: 7 сентября 2014 г<br>
-        Скульптор: Константин Гарапач<br>
-        Состояние: Существует<br>
-        Материалы: бронза, серый гранит<br> </div>
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie21"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник кошке блокадного Ленинграда </div>
-      <div class="block3"> Адрес: ул. Композиторов, д. 4 <br>
-        Дата открытия: сентябрь 2016 г<br>
-        Скульптор: Наталья Рысева <br>
-        Состояние: Существует<br>
-        Материалы: бронза, золото, дерево<br> </div>
-    </a>
-  </div>
-  </div>
-
-  <div class="bloksG">
-  <div class="blocks">
-    <a class="btnD block1" href="#zatemnenie22" > 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Шостаковичу </div>
-      <div class="block3"> Адрес: Санкт-Петербург, угол пр. Энгельса и ул. Шостаковича<br>
-        Дата открытия: 25 сентября 2009 г<br>
-        Скульптор: Константин Гарапач<br>
-        Состояние: Существует<br>
-        Материалы: бронза, серый гранит<br> </div>
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie23"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Военным дрессировщикам и служебным собакам Ленинградского фронта </div>
-      <div class="block3"> Адрес: Санкт-Петербург, пр. Тихорецкий, д. 37 (Парк Сосновка) <br>
-        Дата открытия: 12 мая 2017 г<br>
-        Скульптор: Александр Чернощеков<br>
-        Состояние: Существует<br>
-        Материалы: бронза, красный гранит<br> </div>
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie24"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Скульптура Каменный гребец </div>
-      <div class="block3"> Адрес: Санкт-Петербург, ул. Большая Озерная, д. 55 <br>
-        Дата открытия: 17 мая 2003 г<br>
-        Скульптор: Д. Д. Каминкер<br>
-        Состояние: Существует<br>
-        Материалы: серый гранит<br> </div>
-    </a>
-  </div>
-  </div>
-
-
-  <div class="bloksG">
-  <div class="blocks">
-    <a class="btnD block1" href="#zatemnenie25"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Петру I на Большом Сампсониевском </div>
-      <div class="block3"> Адрес: Санкт-Петербург, пр. Большой Сампсониевский, д. 41 <br>
-        Дата открытия: 2003 г<br>
-        Скульптор: М. М. Антокольский<br>
-        Состояние: Существует<br>
-        Материалы: бронза, красный гранит<br> </div>
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie26">
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник Сергею Есенину </div>
-      <div class="block3"> Адрес: ул. Есенина, 1 (ст. м. «Озерки») <br>
-        Дата открытия: 7 октября 2009 г<br>
-        Скульптор: Альберт Серафимович Чаркин<br>
-        Состояние: Существует<br>
-        Материалы: бронза, красный гранит<br> </div>
-    </a>
-
-    <a class="btnD block1" href="#zatemnenie27"> 
-      <div class="photomon"><img src="../../photos\Do_CCCR\Ville_I\Ville_I_1.jpg" width="100%" height="100%"/></div>
-      <div class="block2"> Памятник шарманщику </div>
-      <div class="block3"> Адрес: Санкт-Петербург, ш. Фермское, д. 41 <br>
-        Дата открытия: 2015 г<br>
-        Скульптор: -<br>
-        Состояние: Существует<br>
-        Материалы: бронза<br> </div> 
-    </a>
-  </div>
-  </div>
+    
 
   <div class="headtopDown"> 
-    <div class="headtopDownH"> 
-      <p>N</p>
-      <P>N</P>
-    </div>
+    <div class="headtopDownH"> текст </div>
   </div>
-
-  <div id="zatemnenie1">
+  
+   <div id="zatemnenie1">
     <div id="okno"> 
       <div class="underMAP"> <a href="#q" class="close"><img src="..\..\photos\krest.png" width="100%" height="100%"/></a>
         <div class="blockN">Памятник Виллие Я. В.
@@ -1861,9 +1629,7 @@ Online HTML, CSS and JavaScript editor to run code online.
       
     </div>
   </div>
-
-</div>
-
+</div> 
 </body>
 
 </html>
